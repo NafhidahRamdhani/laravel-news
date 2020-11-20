@@ -12,13 +12,6 @@ class NewsController extends Controller
         $result = json_decode($response);
         return view('home',['artikel'=>$result->articles]);
 }
-    public function searchData(Request $request){
-        $client = new Client();
-        $query = $request->keyword;
-        $req = $client->get('https://newsapi.org/v2/topheadlines?country=id&apiKey=YOURAPIKEY&q='.$query);
-        $response = $req->getBody();
-        $result = json_decode($response);
-        return view('home',['artikel'=>$result->articles]);
-   }
+    
    
 }

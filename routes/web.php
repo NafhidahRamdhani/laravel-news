@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/','NewsController@getData');
-Route::get('/search','NewsController@searchData');
+Route::get('/search','TestController@searchData');
 
